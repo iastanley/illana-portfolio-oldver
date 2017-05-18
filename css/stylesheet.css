@@ -1,0 +1,152 @@
+
+/*hamburger menu styling*/
+.hamburger {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #777;
+  border-radius: 1px;
+  margin:5px
+}
+
+#menu-toggle {
+  padding: 3px 8px 3px 8px;
+}
+
+
+
+/******WRAPPER STYLES*******/
+#wrapper {
+  padding-left: 0;
+  /*transitions*/
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed; /*sidebar is position fixed*/
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #000;
+  /*transition*/
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/*******PAGE CONTENT STYLES********/
+
+#page-content-wrapper {
+
+  width: 100%;
+  position: absolute; /*page content is absolute (mobile) and relative (desktop)*/
+  padding: 15px;
+}
+
+/********TOGGLED STYLES - APPLIED TO WRAPPERS**********/
+
+/*this is actually necessary at 250px for mobile view*/
+#wrapper.toggled {
+  padding-left: 250px;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+  position: absolute; /*is this necessary?*/
+  margin-right: -250px;
+}
+
+/*toggled hamburger styling to black*/
+#menu-toggle.toggled {
+  background: #000;
+  border: 1px solid #999;
+}
+
+#menu-toggle.toggled .hamburger {
+  background: #999;
+}
+
+/*******SIDEBAR STYLING*******/
+.sidebar-nav {
+  position: absolute; /*the sidebar ul ALSO has absolute position*/
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #999;
+}
+
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-nav li a:active, .sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+  height: 65px;
+  font-size: 25px;
+  line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: #fff;
+}
+
+/*one more sidebar style needed for sidebar-brand*/
+
+/*MEDIA QUERY - CREATES THE DESKTOP STYLING - MOBILE IS DEFAULT*/
+@media(min-width:768px) {
+  #wrapper {
+    padding-left: 250px;
+  }
+
+  /*toggled in desktop will close the sidebar*/
+  #wrapper.toggled {
+    padding-left: 0;
+  }
+
+  #sidebar-wrapper {
+    width: 250px;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    width: 0;
+  }
+
+  #page-content-wrapper {
+    padding: 5px;
+    position: relative;
+  }
+
+  #page-content-wrapper .container-fluid {
+    padding: 20px;
+  }
+
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+  }
+
+}
