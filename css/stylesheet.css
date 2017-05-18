@@ -11,6 +11,7 @@
 
 #menu-toggle {
   padding: 3px 8px 3px 8px;
+  position: fixed;
 }
 
 
@@ -46,6 +47,27 @@
   position: absolute; /*page content is absolute (mobile) and relative (desktop)*/
   padding: 15px;
 }
+
+.page-content {
+  text-align: center;
+  height: 100vh;
+}
+
+.page-content h1 {
+  font-size: 4em;
+  margin: 100px auto;
+}
+
+.page-content p {
+  font-size: 1.2em;
+}
+
+.intro-content {
+  max-width: 70%;
+  margin: auto;
+}
+
+
 
 /********TOGGLED STYLES - APPLIED TO WRAPPERS**********/
 
