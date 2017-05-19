@@ -12,9 +12,12 @@
 #menu-toggle {
   padding: 3px 8px 3px 8px;
   position: fixed;
+  margin: 10px;
 }
 
-
+.btn-default {
+  background: none;
+}
 
 /******WRAPPER STYLES*******/
 #wrapper {
@@ -42,20 +45,20 @@
 /*******PAGE CONTENT STYLES********/
 
 #page-content-wrapper {
-
   width: 100%;
   position: absolute; /*page content is absolute (mobile) and relative (desktop)*/
-  padding: 15px;
+  padding: 0px;
 }
 
 .page-content {
   text-align: center;
-  height: 100vh;
+  
 }
 
 .page-content h1 {
   font-size: 4em;
-  margin: 100px auto;
+  font-weight: normal;
+  margin: 200px auto 100px auto;
 }
 
 .page-content p {
@@ -67,6 +70,16 @@
   margin: auto;
 }
 
+#home {
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../images/heroimage-blur.jpg') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  height: 100vh;
+}
+
+#portfolio {
+  height: 100vh;
+}
 
 
 /********TOGGLED STYLES - APPLIED TO WRAPPERS**********/
@@ -86,14 +99,14 @@
 }
 
 /*toggled hamburger styling to black*/
-#menu-toggle.toggled {
+/*#menu-toggle.toggled {
   background: #000;
   border: 1px solid #999;
-}
+}*/
 
-#menu-toggle.toggled .hamburger {
+/*#menu-toggle.toggled .hamburger {
   background: #999;
-}
+}*/
 
 /*******SIDEBAR STYLING*******/
 .sidebar-nav {
@@ -170,7 +183,7 @@
   }
 
   #page-content-wrapper {
-    padding: 5px;
+    padding: 0px;
     position: relative;
   }
 
@@ -181,6 +194,10 @@
   #wrapper.toggled #page-content-wrapper {
     position: relative;
     margin-right: 0;
+  }
+
+  #menu-toggle {
+    margin: 5px;
   }
 
 }
