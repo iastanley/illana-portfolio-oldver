@@ -58,7 +58,7 @@
 .page-content h1 {
   font-size: 4em;
   font-weight: normal;
-  margin: 200px auto 100px auto;
+  margin: 100px auto 50px auto;
 }
 
 .page-content p {
@@ -94,7 +94,8 @@
 }
 
 #wrapper.toggled #page-content-wrapper {
-  position: absolute; /*is this necessary?*/
+  /*is this necessary?*/
+  position: absolute; 
   margin-right: -250px;
 }
 
