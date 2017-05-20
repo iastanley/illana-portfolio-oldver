@@ -11,8 +11,11 @@
 
 #menu-toggle {
   padding: 3px 8px 3px 8px;
+  margin: 15px 10px;
+}
+
+.fixed {
   position: fixed;
-  margin: 10px;
 }
 
 .btn-default {
@@ -200,5 +203,4 @@
   #menu-toggle {
     margin: 5px;
   }
-
 }
