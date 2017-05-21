@@ -92,9 +92,13 @@
   min-height: 100vh;
 }
 
+#about-me {
+  background: #dfdfdf;
+}
+
 .project-panel {
   max-width: 85%;
-  margin: 15px auto;
+  margin: 30px auto;
   border: 1px solid grey;
   border-radius: 5px;
 }
@@ -114,6 +118,19 @@
   padding: 0 10px;
 }
 
+#about-me p {
+  text-align: left;
+}
+
+#about-me h2 {
+  margin: 10px auto 20px auto;
+}
+
+#about-me img {
+  width: 100%;
+  border-radius: 5px;
+}
+ 
 /********TOGGLED STYLES - APPLIED TO WRAPPERS**********/
 
 /*this is actually necessary at 250px for mobile view*/
