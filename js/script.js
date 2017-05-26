@@ -15,6 +15,11 @@ $(document).ready(function(){
       }, 800, function(){
         window.location.hash = hash;
       });
-    }
+    } //end of smooth scroll behavior
+
+    //remove selected class from all links
+    $('#sidebar-wrapper a').removeClass('selected');
+    //add selected class to clicked link
+    $(this).addClass('selected');
   });
 });
