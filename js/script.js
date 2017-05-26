@@ -17,6 +17,7 @@ $(document).ready(function(){
     $(this).addClass('selected');
   });
 
+  //add scrolling to arrow on home section
   $('.intro-content a').on('click', function(event) {
     if (this.hash) {
       event.preventDefault();
