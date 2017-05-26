@@ -9,17 +9,29 @@ $(document).ready(function(){
   $('#sidebar-wrapper a').on('click', function(event) {
     if (this.hash) {
       event.preventDefault();
-      var hash = this.hash;
-      $('body, html').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-        window.location.hash = hash;
-      });
-    } //end of smooth scroll behavior
-
+      smoothScroll(this.hash);
+    }
     //remove selected class from all links
     $('#sidebar-wrapper a').removeClass('selected');
     //add selected class to clicked link
     $(this).addClass('selected');
   });
+
+  $('.intro-content a').on('click', function(event) {
+    if (this.hash) {
+      event.preventDefault();
+      smoothScroll(this.hash);
+    }
+    $('#sidebar-wrapper a').removeClass('selected');
+    $('a[href="#portfolio"]').addClass('selected');
+  });
+
 });
+
+function smoothScroll(hash) {
+  $('body, html').animate({
+    scrollTop: $(hash).offset().top
+  }, 800, function(){
+    window.location.hash = hash;
+  });
+}

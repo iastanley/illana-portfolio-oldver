@@ -81,6 +81,12 @@
   margin: auto;
 }
 
+.fa-chevron-down {
+  margin-top: 75%;
+  font-size: 3em;
+  color: #fff;
+}
+
 #home {
   background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../images/heroimage-blur.jpg') no-repeat center center;
   background-size: cover;
