@@ -3,7 +3,7 @@
   display: block;
   width: 25px;
   height: 3px;
-  background: #777;
+  background: #000;
   border-radius: 1px;
   margin:5px
 }
@@ -19,21 +19,6 @@
   z-index: 10001 ;
 }
 
-.btn-default {
-  background: none;
-  border: 1px solid #000;
-}
-
-/*fixed the issue of the bootstrap column preventing button event*/
-/*.row-fix {
-  width: 90%;
-  margin: auto;
-}*/
-
-/*.row-size {
-  width: 90%;
-  margin: auto;
-}*/
 /******WRAPPER STYLES*******/
 #wrapper {
   padding-left: 0;
@@ -141,6 +126,11 @@
 .project-panel a {
   float: right;
   margin: 10px;
+}
+
+.btn-default {
+  background: none;
+  border: 1px solid #000;
 }
 
 #about-me {
