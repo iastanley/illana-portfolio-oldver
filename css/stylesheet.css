@@ -11,15 +11,17 @@
 #menu-toggle {
   padding: 3px 8px 3px 8px;
   margin: 15px 10px;
-  z-index: 10001;
+
 }
 
 .fixed {
   position: fixed;
+  z-index: 10001 ;
 }
 
 .btn-default {
   background: none;
+  border: 1px solid #000;
 }
 
 /*fixed the issue of the bootstrap column preventing button event*/
@@ -28,6 +30,10 @@
   margin: auto;
 }*/
 
+/*.row-size {
+  width: 90%;
+  margin: auto;
+}*/
 /******WRAPPER STYLES*******/
 #wrapper {
   padding-left: 0;
@@ -82,7 +88,10 @@
 }
 
 .fa-chevron-down {
-  margin-top: 75%;
+  position: absolute;
+  top: 90vh;
+  left: 185px;
+  /*margin-top: 75%;*/
   font-size: 3em;
   color: #fff;
 }
@@ -104,18 +113,20 @@
 
 
 .project-panel {
-  background: #fff;
+  /*background: #fff;*/
   max-width: 85%;
-  margin: 30px auto;
+  margin: 30px auto 50px auto;
   border-bottom: 1px solid #ddd;
   border-radius: 5px;
-  box-shadow: 2px 2px 10px;
+
 }
 
 .project-panel img {
   width: 100%;
-  border-radius: 5px 5px 0 0;
-  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 5px;
+  /*box-shadow: 1px 1px 5px;*/
+  /*border-bottom: 1px solid #ddd;*/
 }
 
 .project-panel h3 {
@@ -252,6 +263,10 @@
 
 /*MEDIA QUERY - CREATES THE DESKTOP STYLING - MOBILE IS DEFAULT*/
 @media(min-width:768px) {
+  .fa-chevron-down {
+    left: auto;
+  }
+
   #wrapper {
     padding-left: 250px;
   }
