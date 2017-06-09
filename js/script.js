@@ -16,7 +16,8 @@ $(document).ready(function(){
     //add selected class to clicked link
     $(this).addClass('selected');
     if (document.documentElement.clientWidth < 768) {
-      console.log('This is working!!!');
+      $('#wrapper').toggleClass("toggled");
+      $('#menu-toggle').toggleClass("toggled");
     }
   });
 
