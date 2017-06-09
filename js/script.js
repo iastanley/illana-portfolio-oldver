@@ -15,6 +15,9 @@ $(document).ready(function(){
     $('#sidebar-wrapper a').removeClass('selected');
     //add selected class to clicked link
     $(this).addClass('selected');
+    if (document.documentElement.clientWidth < 768) {
+      console.log('This is working!!!');
+    }
   });
 
   //add scrolling to arrow on home section
